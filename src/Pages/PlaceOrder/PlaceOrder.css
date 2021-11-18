@@ -1,0 +1,28 @@
+.place-order{
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+}
+.place-order form{
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    flex-direction: column;
+    width: 80%;
+}
+.place-order form input{
+    margin-top: 7px;
+    border: 2px solid orange;
+    border-radius: 5px;
+    width: 80%;
+    padding: 5px 10px;
+}
+.place-order form input:focus{
+    outline: none;
+}
+@media only screen and (max-width:580px) {
+    .place-order form{
+        width: 70%;
+    }
+}

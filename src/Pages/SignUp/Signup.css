@@ -1,0 +1,31 @@
+.sign-up{
+    position: relative;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    flex-direction: column;
+}
+.signup-container{
+    border: 4px solid #ffc107;
+    background-color: #fff;
+    padding: 45px 30px;
+    border-radius: 15px;
+    display: flex;
+    flex-direction: column;
+
+}
+
+.signup-container input{
+    margin-bottom: 35px;
+    border: none;
+    width: 90%;
+    border-bottom:3px solid #ffc107 ;
+}
+.signup-container input:focus{
+    outline: none;
+}
+@media only screen and (max-width:480px) {
+    .signup-container{
+        width: 80%;
+    }
+}

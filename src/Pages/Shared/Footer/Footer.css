@@ -1,0 +1,27 @@
+.footer-section{
+    background-color: #ffc107;
+    height: 100%;
+}
+.icon-container{
+    display: flex;
+    justify-content: space-between;
+    width: 55%;
+    font-size: 20px;
+}
+.icon-container a:hover {
+    color: black;
+    transition: 0.5s;
+}
+.icon-container a{
+    color: black;
+    font-size: 20px;
+}
+.icon{
+    color: black;
+    font-size: 20px;
+    margin-right: 10px;
+}
+.info li{
+    list-style: none;
+    margin-top: 10px;
+}

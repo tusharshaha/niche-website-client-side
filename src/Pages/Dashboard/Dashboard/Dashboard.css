@@ -1,0 +1,115 @@
+.sidebar_left_side {
+    height: 100vh;
+    padding: 20px 15px 0;
+    flex: 20%;
+    position: fixed;
+    width: 270px;
+    background-color: #fff;
+    border-right: 2px solid rgba(151, 147, 147, 0.781);
+}
+.top-icon{
+    margin-bottom: 25px;
+}
+.top-icon a{
+    text-decoration: none;
+}
+.sidebar_item {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    cursor: pointer;
+}
+.dash-menu{
+    padding: 0px;
+}
+.dash-menu li{
+    list-style: none;
+    margin-top: 15px;
+}
+.dash-menu li a{
+    text-decoration: none;
+    color: black;
+    padding: 5px 10px;
+    font-size: 17px;
+}
+.dash-menu li a .dash-icon{
+    font-size: 25px;
+    margin-right: 7px;
+
+}
+
+.dash-menu li a:hover{
+    background-color: #000;
+    color: #fff;
+}
+
+.dash-menu li .selected-menu{
+    background-color: #000;
+    color: #fff;
+}
+
+.sidebar_item .title {
+    flex: 80%;
+}
+.sidebar_item .title h4 {
+    font-size: 18px;
+    margin-bottom: 0;
+}
+
+
+
+.dash_right_side {
+    flex: 80%;
+    margin-left: 280px;
+
+}
+
+.menubar {
+    position: absolute;
+    top: 10px;
+    left: 20px;
+    display: none;
+    z-index: 100;
+}
+.menubar .toogle-icon{
+    font-size: 25px;
+}
+
+/* ----small mobile device---------- */
+
+@media (max-width:768px) {
+    .menubar {
+        display: flex;
+        cursor: pointer;
+    }
+    .dashboard_logo {
+        margin: 60px 0 0;
+    }
+    .sidebar_left_side {
+        left: -100%;
+        transition: 0.5s;
+    }
+
+    .dash_right_side {
+        margin-left: 0px;
+        text-align: center;
+    }
+    .showSidebar {
+        display: block;
+        height: 100vh;
+        border-right: 2px solid rgba(151, 147, 147, 0.781);
+        background-color: #fff;
+        padding: 20px 15px 0;
+        flex: 20%;
+        position: fixed;
+        width: 280px;
+        top: 0;
+        left: 0%;
+        transition: 0.5s;
+        z-index: 99;
+    }
+    .top-icon{
+        margin-top: 30px;
+    }
+
+}

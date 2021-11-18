@@ -1,0 +1,21 @@
+.admin-form{
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+}
+.admin-form input[type='email']{
+    border: none;
+    padding: 5px 15px;
+    border-bottom: 2px solid orange;
+    margin: 20px 0px;
+    width: 60%;
+}
+.admin-form input[type='email']:focus{
+    outline: none;
+}
+@media (max-width:768px) {
+    .admin-form input[type='email']{
+        width: 80%;
+    }
+}
