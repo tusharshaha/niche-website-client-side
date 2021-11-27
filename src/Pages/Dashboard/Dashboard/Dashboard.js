@@ -34,7 +34,7 @@ const Dashboard = () => {
                 <div onClick={() => setToggle(!toggle)} className="menubar"> <FiMenu className='toogle-icon'/> </div>
                 <div className={toggle ? "showSidebar" : "sidebar_left_side"}>
                     <div className="top-icon">
-                         <p>KidsToy</p>
+                         <p style={{color:'#eb9903'}}>KidsToy</p>
                     </div>
 
                     {!isAdmin && <ul className="dash-menu">
@@ -63,7 +63,7 @@ const Dashboard = () => {
                             </NavLink>
                         </li>
                         <li className=" mt-3">
-                            <Button onClick={logOut} variant='outline-dark'>LogOut</Button>
+                            <Button onClick={logOut} variant='outline-warning' className='fw-bold'>LogOut</Button>
                         </li>
                     </ul>}
                     {isAdmin && <ul className="dash-menu">
@@ -96,7 +96,7 @@ const Dashboard = () => {
                             </NavLink>
                         </li>
                         <li className="mt-3">
-                            <Button onClick={logOut} variant='outline-dark'>LogOut</Button>
+                            <Button onClick={logOut} variant='outline-warning' className='fw-bold'>LogOut</Button>
                         </li>
                     </ul>
                     }

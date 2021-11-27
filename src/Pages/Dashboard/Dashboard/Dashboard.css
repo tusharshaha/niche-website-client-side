@@ -28,7 +28,7 @@
 }
 .dash-menu li a{
     text-decoration: none;
-    color: black;
+    color: #915e00;
     padding: 5px 10px;
     font-size: 17px;
 }
@@ -39,12 +39,12 @@
 }
 
 .dash-menu li a:hover{
-    background-color: #000;
+    background-color: #eb9903;
     color: #fff;
 }
 
 .dash-menu li .selected-menu{
-    background-color: #000;
+    background-color: #eb9903;
     color: #fff;
 }
 

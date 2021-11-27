@@ -26,7 +26,7 @@ const AboutProducts = () => {
             <Row xs={1} sm={2} md={2} lg={3} className="g-4">
                 {
                     productInfo?.map(product=><Col key={product.id}>
-                        <div className='text-center'>
+                        <div data-aos='fade-up' className='text-center'>
                             <product.icon style={{color:product.iconColor, fontSize:'35px'}}/>
                             <h4 className='fw-bold mt-3'>{product.title}</h4>
                             <p className='text-secondary mt-2'>{product.description}</p>

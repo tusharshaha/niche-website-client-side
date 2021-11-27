@@ -52,8 +52,8 @@ const Order = ({ order }) => {
         })
     }
     return (
-        <Col>
-            <Card className='h-100'>
+        <Col data-aos='zoom-in'>
+            <Card className='h-100 card-hover'>
                 <Card.Body>
                     <Card.Title className='text-secondary fw-bold'>{productName}</Card.Title>
                 </Card.Body>

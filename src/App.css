@@ -1,6 +1,14 @@
 @import url('https://fonts.googleapis.com/css2?family=Poppins&display=swap');
 .App {
     font-family: 'Poppins', sans-serif;
+    overflow: hidden;
 }
 
-
+.animation-box {
+    min-height: 100vh;
+    background-color: #1d2a45;
+    color: #f7d919;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}

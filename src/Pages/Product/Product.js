@@ -6,8 +6,8 @@ const Product = ({product}) => {
     const {_id,img,name,price,description}= product;
     const history= useHistory()
     return (
-        <Col>
-            <Card className='h-100'>
+        <Col data-aos='zoom-in'>
+            <Card className='h-100 card-hover'>
                 <Card.Img className='card-img' variant="top" src={img} />
                 <Card.Body>
                     <Card.Title>{name}</Card.Title>

@@ -10,7 +10,6 @@ const MProduct = ({product}) => {
             showCancelButton: true,
             confirmButtonText: 'Delete',
         }).then((result) => {
-            /* Read more about isConfirmed, isDenied below */
             if (result.isConfirmed) {
                 fetch(`https://fathomless-savannah-81203.herokuapp.com/products/${id}`, {
                     method: 'DELETE'
@@ -31,7 +30,7 @@ const MProduct = ({product}) => {
     }
     return (
         <Col>
-            <Card className='h-100'>
+            <Card data-aos='fade-in' className='h-100 card-hover'>
                 <Card.Img className='card-img' variant="top" src={img} />
                 <Card.Body>
                     <Card.Title>{name}</Card.Title>

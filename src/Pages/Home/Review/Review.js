@@ -1,11 +1,12 @@
 import React from 'react';
 import { Col, Card } from 'react-bootstrap';
 import ReactStars from "react-rating-stars-component";
+import './Review.css'
 const Review = ({ reviews }) => {
     const { productName, name, rating, description } = reviews
     return (
-        <Col>
-            <Card className='h-100'>
+        <Col data-aos='fade-in' >
+            <Card className='h-100 card-hover'>
                 <Card.Header>{productName}</Card.Header>
                 <Card.Body>
                     <Card.Title className='text-capitalize'>{name}</Card.Title>
