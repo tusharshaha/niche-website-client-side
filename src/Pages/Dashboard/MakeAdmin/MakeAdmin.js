@@ -16,7 +16,20 @@ const MakeAdmin = () => {
                 "content-type": "application/json",
             },
         })
-            .then((res) => res.json())
+            .then((res) => {
+                if(res.status === 200){
+                    return res.json()
+                }else if(res.status === 403){
+                    Swal.fire({
+                        position: 'center',
+                        icon: 'warning',
+                        title: 'Warning!',
+                        text: "You don't have permission to make admin",
+                        showConfirmButton: false,
+                        timer: 1500
+                    })
+                }
+            })
             .then((data) => {
                 if (data.modifiedCount > 0) {
                     Swal.fire({
