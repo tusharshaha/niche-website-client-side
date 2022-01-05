@@ -5,7 +5,8 @@ import {
     signOut,
     signInWithEmailAndPassword,
     onAuthStateChanged,
-    updateProfile
+    updateProfile,
+    getIdToken
 } from "firebase/auth";
 import initializeAuthentication from "../Firebase/firebase.init";
 
@@ -53,7 +54,7 @@ const useFirebase = () => {
                     setAuthError(error.message)
                 }
             })
-            .finally(() =>setIsLoading(false));
+            .finally(() => setIsLoading(false));
     };
 
     // sign in user
@@ -84,7 +85,7 @@ const useFirebase = () => {
                     setAuthError(error.message)
                 }
             })
-            .finally(() =>setIsLoading(false));
+            .finally(() => setIsLoading(false));
     };
     // current signin user
     useEffect(() => {
@@ -92,6 +93,10 @@ const useFirebase = () => {
         onAuthStateChanged(auth, (user) => {
             if (user) {
                 setUser(user)
+                getIdToken(user)
+                .then(idToken=> {
+                    window.localStorage.setItem('token', idToken)
+                })
             } else {
                 setUser({})
             }
@@ -111,7 +116,7 @@ const useFirebase = () => {
                 else {
                     setIsAdmin(false);
                 }
-            setIsLoading(false);
+                setIsLoading(false);
             })
     }, [user.email])
     // save user to database
@@ -136,7 +141,7 @@ const useFirebase = () => {
             .catch((error) => {
                 setAuthError(error.message)
             })
-            .finally(() =>setIsLoading(false));
+            .finally(() => setIsLoading(false));
     };
 
     return {
@@ -151,3 +156,5 @@ const useFirebase = () => {
 };
 
 export default useFirebase;
+
+
