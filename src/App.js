@@ -17,13 +17,12 @@ import { useEffect, useState } from 'react';
 import { GridLoader } from 'react-spinners';
 
 function App() {
-  const [loading, setLoading] = useState(false);
+  const [loading, setLoading] = useState(true);
   const override = css``;
   useEffect(() => {
     AOS.init({ offset: 160, duration: 900, delay: 200 });
   });
   useEffect(() => {
-    setLoading(true)
     setTimeout(() => {
       setLoading(false)
     }, 1500)
