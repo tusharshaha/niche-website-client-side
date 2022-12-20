@@ -11,7 +11,7 @@ const PlaceOrder = () => {
     const [orderInfo, setOrderInfo] = useState({})
     const {user} = useAuth()
     const {id}= useParams();
-    fetch(`https://fathomless-savannah-81203.herokuapp.com/products/${id}`)
+    fetch(`https://niche-product-server-side.vercel.app/products/${id}`)
     .then(res=>res.json())
     .then(data => setProduct(data))
     const handleBlur=(e)=>{
@@ -27,7 +27,7 @@ const PlaceOrder = () => {
     }
     const handleSubmit=(e)=>{
         e.preventDefault()
-        fetch('https://fathomless-savannah-81203.herokuapp.com/myOrder',{
+        fetch('https://niche-product-server-side.vercel.app/myOrder',{
             method:'POST',
             headers:{
                 'content-type':'application/json'

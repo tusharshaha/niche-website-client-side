@@ -11,7 +11,7 @@ const MProduct = ({product}) => {
             confirmButtonText: 'Delete',
         }).then((result) => {
             if (result.isConfirmed) {
-                fetch(`https://fathomless-savannah-81203.herokuapp.com/products/${id}`, {
+                fetch(`https://niche-product-server-side.vercel.app/products/${id}`, {
                     method: 'DELETE'
                 }).then(res => res.json())
                 .then(data => {

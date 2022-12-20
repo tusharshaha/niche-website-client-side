@@ -16,7 +16,7 @@ const SendReview = () => {
     }
     const handleSubmit = (e)=>{
         e.preventDefault()
-        fetch('https://fathomless-savannah-81203.herokuapp.com/reviews',{
+        fetch('https://niche-product-server-side.vercel.app/reviews',{
             method:'POST',
             headers:{
                 'content-type' : 'application/json'

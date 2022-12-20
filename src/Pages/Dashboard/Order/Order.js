@@ -6,7 +6,7 @@ const Order = ({ order }) => {
     const { isAdmin } = useAuth()
     const { _id, userName, userEmail, productName, status, date, address, phone } = order
     const handleShip = (id)=>{
-        fetch(`https://fathomless-savannah-81203.herokuapp.com/orders/${id}`,{
+        fetch(`https://niche-product-server-side.vercel.app/orders/${id}`,{
             method:'PUT',
             headers:{
                 'content-type':'application/json'
@@ -34,7 +34,7 @@ const Order = ({ order }) => {
             confirmButtonText: 'Delete',
         }).then((result) => {
             if (result.isConfirmed) {
-                fetch(`https://fathomless-savannah-81203.herokuapp.com/orders/${id}`, {
+                fetch(`https://niche-product-server-side.vercel.app/orders/${id}`, {
                     method: 'DELETE'
                 }).then(res => res.json())
                 .then(data => {

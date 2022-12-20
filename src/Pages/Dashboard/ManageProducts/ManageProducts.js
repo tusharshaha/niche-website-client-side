@@ -5,7 +5,7 @@ import MProduct from '../MProduct/MProduct';
 const ManageProducts = () => {
     const [products,setProducts] = useState([])
     useEffect(()=>{
-        fetch('https://fathomless-savannah-81203.herokuapp.com/products').then(res => res.json())
+        fetch('https://niche-product-server-side.vercel.app/products').then(res => res.json())
         .then(data => setProducts(data))
     },[products])
     return (

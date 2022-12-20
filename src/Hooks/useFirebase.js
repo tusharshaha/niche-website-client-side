@@ -106,8 +106,8 @@ const useFirebase = () => {
     // check admin
     useEffect(() => {
         setIsLoading(true);
-        const url = `https://fathomless-savannah-81203.herokuapp.com/checkadmin/${user?.email}`
-        fetch(url)
+        const url = `https://niche-product-server-side.vercel.app/checkadmin/${user?.email}`
+        user?.email && fetch(url)
             .then(res => res.json())
             .then(data => {
                 if (data.role === 'admin') {
@@ -122,7 +122,7 @@ const useFirebase = () => {
     // save user to database
     const saveUser = (name, email) => {
         const newUser = { name, email };
-        fetch('https://fathomless-savannah-81203.herokuapp.com/users', {
+        fetch('https://niche-product-server-side.vercel.app/users', {
             method: 'POST',
             headers: {
                 'content-type': 'application/json'

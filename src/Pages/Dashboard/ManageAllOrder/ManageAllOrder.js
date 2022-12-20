@@ -5,7 +5,7 @@ import Order from '../Order/Order';
 const ManageAllOrder = () => {
     const [allOrders, setAllOrders] = useState([])
     useEffect(()=>{
-        fetch('https://fathomless-savannah-81203.herokuapp.com/allOrder')
+        fetch('https://niche-product-server-side.vercel.app/allOrder')
         .then(res => res.json())
         .then(data => setAllOrders(data))
     },[allOrders])

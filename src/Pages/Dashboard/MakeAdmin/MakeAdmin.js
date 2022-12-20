@@ -9,7 +9,7 @@ const MakeAdmin = () => {
     };
     const handleSubmit = (e) => {
         e.preventDefault()
-        fetch(`https://fathomless-savannah-81203.herokuapp.com/users/${adminEmail}`, {
+        fetch(`https://niche-product-server-side.vercel.app/users/${adminEmail}`, {
             method: "PUT",
             headers: {
                 "authorization": `Bearer ${window.localStorage.getItem('token')}`,

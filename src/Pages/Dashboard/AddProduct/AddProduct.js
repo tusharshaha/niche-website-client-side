@@ -5,7 +5,7 @@ import './AddProduct.css'
 const AddProduct = () => {
     const { register, handleSubmit,reset } = useForm();
     const onSubmit = data => {
-        fetch('https://fathomless-savannah-81203.herokuapp.com/products',{
+        fetch('https://niche-product-server-side.vercel.app/products',{
             method:'POST',
             headers:{
                 'content-type':'application/json'
