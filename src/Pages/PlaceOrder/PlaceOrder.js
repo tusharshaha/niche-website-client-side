@@ -11,7 +11,7 @@ const PlaceOrder = () => {
     const [orderInfo, setOrderInfo] = useState({})
     const {user} = useAuth()
     const {id}= useParams();
-    fetch(`https://niche-product-server-side.vercel.app/products/${id}`)
+    fetch(`https://kids-toy-server.onrender.com/products/${id}`)
     .then(res=>res.json())
     .then(data => setProduct(data))
     const handleBlur=(e)=>{
@@ -27,7 +27,7 @@ const PlaceOrder = () => {
     }
     const handleSubmit=(e)=>{
         e.preventDefault()
-        fetch('https://niche-product-server-side.vercel.app/myOrder',{
+        fetch('https://kids-toy-server.onrender.com/myOrder',{
             method:'POST',
             headers:{
                 'content-type':'application/json'

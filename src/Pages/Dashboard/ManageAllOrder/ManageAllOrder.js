@@ -5,7 +5,7 @@ import Order from '../Order/Order';
 const ManageAllOrder = () => {
     const [allOrders, setAllOrders] = useState([])
     useEffect(()=>{
-        fetch('https://niche-product-server-side.vercel.app/allOrder')
+        fetch('https://kids-toy-server.onrender.com/allOrder')
         .then(res => res.json())
         .then(data => setAllOrders(data))
     },[allOrders])

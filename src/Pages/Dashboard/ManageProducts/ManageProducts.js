@@ -5,7 +5,7 @@ import MProduct from '../MProduct/MProduct';
 const ManageProducts = () => {
     const [products,setProducts] = useState([])
     useEffect(()=>{
-        fetch('https://niche-product-server-side.vercel.app/products').then(res => res.json())
+        fetch('https://kids-toy-server.onrender.com/products').then(res => res.json())
         .then(data => setProducts(data))
     },[products])
     return (

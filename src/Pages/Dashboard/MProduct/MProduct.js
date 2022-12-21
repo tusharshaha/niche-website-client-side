@@ -11,7 +11,7 @@ const MProduct = ({product}) => {
             confirmButtonText: 'Delete',
         }).then((result) => {
             if (result.isConfirmed) {
-                fetch(`https://niche-product-server-side.vercel.app/products/${id}`, {
+                fetch(`https://kids-toy-server.onrender.com/products/${id}`, {
                     method: 'DELETE'
                 }).then(res => res.json())
                 .then(data => {

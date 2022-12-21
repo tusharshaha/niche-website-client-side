@@ -9,7 +9,7 @@ const MakeAdmin = () => {
     };
     const handleSubmit = (e) => {
         e.preventDefault()
-        fetch(`https://niche-product-server-side.vercel.app/users/${adminEmail}`, {
+        fetch(`https://kids-toy-server.onrender.com/users/${adminEmail}`, {
             method: "PUT",
             headers: {
                 "authorization": `Bearer ${window.localStorage.getItem('token')}`,

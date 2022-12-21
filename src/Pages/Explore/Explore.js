@@ -7,7 +7,7 @@ import Header from '../Shared/Header/Header';
 const Explore = () => {
     const [products, setProducts] = useState([])
     useEffect(() => {
-        fetch('https://niche-product-server-side.vercel.app/products')
+        fetch('https://kids-toy-server.onrender.com/products')
             .then(res => res.json())
             .then(data => setProducts(data))
     }, [])

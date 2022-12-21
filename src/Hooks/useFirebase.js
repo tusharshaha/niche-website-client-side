@@ -106,7 +106,7 @@ const useFirebase = () => {
     // check admin
     useEffect(() => {
         setIsLoading(true);
-        const url = `https://niche-product-server-side.vercel.app/checkadmin/${user?.email}`
+        const url = `https://kids-toy-server.onrender.com/checkadmin/${user?.email}`
         user?.email && fetch(url)
             .then(res => res.json())
             .then(data => {
@@ -122,7 +122,7 @@ const useFirebase = () => {
     // save user to database
     const saveUser = (name, email) => {
         const newUser = { name, email };
-        fetch('https://niche-product-server-side.vercel.app/users', {
+        fetch('https://kids-toy-server.onrender.com/users', {
             method: 'POST',
             headers: {
                 'content-type': 'application/json'

@@ -7,7 +7,7 @@ const MyOrder = () => {
     const [myOrders, setMyOrders] = useState([])
     const {user} = useAuth()
     useEffect(()=>{
-        fetch(`https://niche-product-server-side.vercel.app/myOrder/${user?.email}`)
+        fetch(`https://kids-toy-server.onrender.com/myOrder/${user?.email}`)
         .then(res => res.json())
         .then(data => setMyOrders(data))
     },[user,myOrders])

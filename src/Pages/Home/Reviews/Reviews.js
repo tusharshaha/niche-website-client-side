@@ -5,7 +5,7 @@ import Review from '../Review/Review';
 const Reviews = () => {
     const [reviews,setReviews]=useState([])
     useEffect(()=>{
-        fetch('https://niche-product-server-side.vercel.app/reviews')
+        fetch('https://kids-toy-server.onrender.com/reviews')
         .then(res=>res.json())
         .then(data=>setReviews(data))
     },[])

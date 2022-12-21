@@ -5,7 +5,7 @@ import './AddProduct.css'
 const AddProduct = () => {
     const { register, handleSubmit,reset } = useForm();
     const onSubmit = data => {
-        fetch('https://niche-product-server-side.vercel.app/products',{
+        fetch('https://kids-toy-server.onrender.com/products',{
             method:'POST',
             headers:{
                 'content-type':'application/json'

@@ -16,7 +16,7 @@ const SendReview = () => {
     }
     const handleSubmit = (e)=>{
         e.preventDefault()
-        fetch('https://niche-product-server-side.vercel.app/reviews',{
+        fetch('https://kids-toy-server.onrender.com/reviews',{
             method:'POST',
             headers:{
                 'content-type' : 'application/json'
