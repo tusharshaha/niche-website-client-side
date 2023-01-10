@@ -1,7 +1,7 @@
 import React from 'react';
 import {Col,Card,Button} from 'react-bootstrap'
 import Swal from 'sweetalert2';
-const MProduct = ({product}) => {
+const MProduct = ({product, setUpdate}) => {
     const {_id,img,name,price}= product;
     const handleDelete = (id) => {
         Swal.fire({
@@ -16,6 +16,7 @@ const MProduct = ({product}) => {
                 }).then(res => res.json())
                 .then(data => {
                     if (data.deletedCount > 0) {
+                        setUpdate(prev => !prev)
                         Swal.fire({
                             position: 'center',
                             icon: 'success',

@@ -2,28 +2,29 @@ import React from 'react';
 import { Col, Card, ListGroup, ListGroupItem, Button } from 'react-bootstrap';
 import Swal from 'sweetalert2'
 import useAuth from '../../../Hooks/useAuth';
-const Order = ({ order }) => {
+const Order = ({ order, setUpdate }) => {
     const { isAdmin } = useAuth()
     const { _id, userName, userEmail, productName, status, date, address, phone } = order
-    const handleShip = (id)=>{
-        fetch(`https://kids-toy-server.onrender.com/orders/${id}`,{
-            method:'PUT',
-            headers:{
-                'content-type':'application/json'
+    const handleShip = (id) => {
+        fetch(`https://kids-toy-server.onrender.com/orders/${id}`, {
+            method: 'PUT',
+            headers: {
+                'content-type': 'application/json'
             }
         })
-        .then(res=>res.json())
-        .then(data => {
-            if (data.modifiedCount > 0) {
-                Swal.fire({
-                    position: 'center',
-                    icon: 'success',
-                    title: 'Prdoduct shipped successfully',
-                    showConfirmButton: false,
-                    timer: 1500
-                })
-            }
-        })
+            .then(res => res.json())
+            .then(data => {
+                if (data.modifiedCount > 0) {
+                    setUpdate(prev => !prev)
+                    Swal.fire({
+                        position: 'center',
+                        icon: 'success',
+                        title: 'Prdoduct shipped successfully',
+                        showConfirmButton: false,
+                        timer: 1500
+                    })
+                }
+            })
     }
 
     const handleDelete = (id) => {
@@ -37,17 +38,18 @@ const Order = ({ order }) => {
                 fetch(`https://kids-toy-server.onrender.com/orders/${id}`, {
                     method: 'DELETE'
                 }).then(res => res.json())
-                .then(data => {
-                    if (data.deletedCount > 0) {
-                        Swal.fire({
-                            position: 'center',
-                            icon: 'success',
-                            title: 'Successfully Deleted Your Order',
-                            showConfirmButton: false,
-                            timer: 1500
-                        })
-                    }
-                })
+                    .then(data => {
+                        if (data.deletedCount > 0) {
+                            setUpdate(prev => !prev);
+                            Swal.fire({
+                                position: 'center',
+                                icon: 'success',
+                                title: 'Successfully Deleted Your Order',
+                                showConfirmButton: false,
+                                timer: 1500
+                            })
+                        }
+                    })
             }
         })
     }
@@ -90,7 +92,7 @@ const Order = ({ order }) => {
                         <span className='me-3 text-success text-capitalize'>{status}</span>
                     }
                         {status === 'pending' &&
-                            <Button onClick={()=>handleShip(_id)} className='me-3' variant='success'>Ship</Button>
+                            <Button onClick={() => handleShip(_id)} className='me-3' variant='success'>Ship</Button>
                         }
 
                         <Button onClick={() => handleDelete(_id)} variant='danger'>Delete</Button></>}
